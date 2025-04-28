@@ -1,0 +1,344 @@
+/* Estilos generales */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #a7d9ed; /* Azul claro */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Para contener las gotas */
+}
+
+.animacion-gotas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite interactuar con el contenido debajo */
+}
+
+.titulo-principal {
+  font-size: 2.5em;
+  margin: 20px 0;
+  animation: movimientoTitulo 2s infinite alternate;
+  color: #1e3a8a; /* Azul oscuro */
+}
+
+@keyframes movimientoTitulo {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+nav {
+  background-color: #e0f2f7; /* Azul muy claro */
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #b2ebf2;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0288d1; /* Azul más oscuro */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #01579b; /* Azul aún más oscuro */
+}
+
+main {
+  padding: 20px;
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+section h2 {
+  color: #4a148c; /* Morado oscuro */
+  margin-top: 0;
+  border-bottom: 2px solid #ce93d8; /* Morado claro */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.descripcion-principal h2 {
+  color: #2e7d32; /* Verde oscuro */
+  border-bottom-color: #a5d6a7; /* Verde claro */
+}
+
+.informacion-proyecto h2 {
+  color: #d84315; /* Naranja oscuro */
+  border-bottom-color: #ffab91; /* Naranja claro */
+}
+
+.informacion-tema h2 {
+  color: #c62828; /* Rojo oscuro */
+  border-bottom-color: #ef9a9a; /* Rojo claro */
+}
+
+.como-donar h2 {
+  color: #ffb300; /* Amarillo oscuro */
+  border-bottom-color: #ffe082; /* Amarillo claro */
+}
+
+.caso-real h2 {
+  color: #1976d2; /* Azul medio */
+  border-bottom-color: #90caf9; /* Azul muy claro */
+}
+
+p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.botones-accion {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.boton-donar, .boton-videos, .boton-ver-mas, .boton-contactar, .boton-enviar {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.boton-donar {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.boton-videos {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.boton-ver-mas {
+  background-color: #008cba; /* Azul */
+  color: white;
+}
+
+.boton-contactar {
+  background-color: #ff9800; /* Naranja */
+  color: white;
+}
+
+.boton-enviar {
+  background-color: #9c27b0; /* Morado */
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.boton-donar:hover {
+  background-color: #43a047;
+}
+
+.boton-videos:hover {
+  background-color: #d32f2f;
+}
+
+.boton-ver-mas:hover {
+  background-color: #0077a3;
+}
+
+.boton-contactar:hover {
+  background-color: #f57c00;
+}
+
+.boton-enviar:hover {
+  background-color: #7b1fa2;
+}
+
+/* Estilos del formulario de contacto */
+.formulario-contacto {
+  background-color: #e3f2fd; /* Azul muy claro */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #bbdefb;
+}
+
+.formulario-contacto h2 {
+  color: #1e88e5; /* Azul */
+  border-bottom-color: #64b5f6; /* Azul más claro */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: calc(100% - 12px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Estilos de la información de contacto */
+.informacion-contacto {
+  background-color: #fbe9e7; /* Naranja muy claro */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ffccbc;
+}
+
+.informacion-contacto h2 {
+  color: #e65100; /* Naranja oscuro */
+  border-bottom-color: #ff8a65; /* Naranja claro */
+}
+
+.informacion-contacto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.informacion-contacto li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.informacion-contacto strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animación de las gotas de agua */
+.animacion-gotas::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 10%;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: caerGota 3s linear infinite;
+  opacity: 0;
+}
+
+.animacion-gotas::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: 20%;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: caerGota 4s linear infinite 1s;
+  opacity: 0;
+}
+
+@keyframes caerGota {
+  0% {
+      transform: translateY(0) scale(1);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(calc(100% + 50px)) scale(0.5);
+      opacity: 0;
+  }
+}
+
+/* Media queries para hacerlo responsivo */
+@media (max-width: 768px) {
+  nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .botones-accion {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .boton-donar, .boton-videos {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-principal {
+      font-size: 2em;
+  }
+
+  section {
+      padding: 15px;
+  }
+
+  .botones-accion a {
+      padding: 8px 15px;
+      font-size: 0.9em;
+  }
+}
